@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"Деструктуризация, Время"</title>
+</head>
+
+
+<body>
+    <ol>
+
+        <li>
+            <p>
+            218 (1) В следующем коде части объекта записываются в соответствующие переменные:
+            
+            let options = {
+            width: 400,
+            height: 500,
+            };
+            
+            let color;
+            if (options.color !== undefined) {
+            color = options.color;
+            } else {
+            color = 'black';
+            }
+            
+            let width = options.width;
+            let height = options.height;
+            Переделайте этот код через деструктуризацию согласно изученной теории.
+            </p>
+            <button onclick="checkResult1()">Проверить</button>
+
+        </li>
+        <li>
+            <p>
+            219 (1)В следующем коде части объекта записываются в соответствующие переменные:
+            
+            let options = {
+            width: 400,
+            height: 500,
+            };
+            
+            let с;
+            if (options.с !== undefined) {
+            с = options.color;
+            } else {
+            с = 'black';
+            }
+            
+            let w = options.width;
+            let h = options.height;
+            Переделайте этот код через деструктуризацию согласно изученной теории.
+            </p>
+            <button onclick="checkResult2()">Проверить</button>
+                </li>
+        <li>
+            <p>
+                221 (1) Переделайте следующий код через деструктуризацию согласно изученной теории:
+                
+                function func(employee) {
+                let name = employee[0];
+                let surname = employee[1];
+                let department = employee[2];
+                let position = employee[3];
+                let salary = employee[4];
+                }
+                
+                func( ['John', 'Smit', 'development', 'programmer', 2000] );
+            </p>
+            <button onclick="checkResult3()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                221 (2) Переделайте следующий код через деструктуризацию согласно изученной теории:
+                
+                function func(employee) {
+                let name = employee[0];
+                let surname = employee[1];
+                let info = employee[2];
+                }
+                
+                func( ['John', 'Smit', 'development', 'programmer', 2000] );
+            </p>
+            <button onclick="checkResult4()">Проверить</button>
+        
+        </li>
+        <li>
+            <p>
+                221 (3) Переделайте следующий код через деструктуризацию согласно изученной теории:
+                
+                function func(employee) {
+                let name = employee[0];
+                let surname = employee[1];
+                let department = employee[2];
+                
+                let position;
+                if (arr[3] !== undefined) {
+                position = arr[3];
+                } else {
+                position = 'джуниор';
+                }
+                }
+                
+                func( ['John', 'Smit', 'development'] );
+            </p>
+            <button onclick="checkResult5()">Проверить</button>
+        
+        </li>
+        <li>
+            <p>
+                221 (4) Переделайте следующий код через деструктуризацию согласно изученной теории:
+                
+                function func(department, employee, hired) {
+                let name = employee[0];
+                let surname = employee[1];
+                
+                let year = hired[0];
+                let month = hired[1];
+                let day = hired[2];
+                }
+                
+                func( 'development', ['John', 'Smit'], [2018, 12, 31] );
+            </p>
+            <button onclick="checkResult6()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                221 (5) Переделайте следующий код через деструктуризацию согласно изученной теории:
+                
+                function func(options) {
+                let color = options.color;
+                let width = options.width;
+                let height = options.height;
+                }
+                
+                func( {color: 'red', width: 400, height: 500} );
+            </p>
+            <button onclick="checkResult7()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                221 (6)Переделайте следующий код через деструктуризацию согласно изученной теории:
+                
+                function func(options) {
+                let width = options.width;
+                let height = options.height;
+                
+                let color;
+                if (options.color !== undefined) {
+                color = options.color;
+                } else {
+                color = 'black';
+                }
+                }
+                
+                func( {color: 'red', width: 400, height: 500} );
+            </p>
+            <button onclick="checkResult8()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                222 Выведите на экран текущий день. Месяц. Год
+            </p>
+            <button onclick="checkResult9()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                223 Выведите на экран текущую дату-время в формате 
+                12:59:59 31.12.2014. Используйте для всех частей даты (кроме года)
+                созданную нами функцию для добавления нуля при необходимости.
+            </p>
+            <button onclick="checkResult10()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                224 Дана дата в формате год-месяц-день. Преобразуйте эту дату в формат день.месяц.год.
+            </p>
+            <button onclick="checkResult11()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                225 Выведите на экран номер текущего дня недели.
+                Определите, является ли текущий день недели выходным или рабочим днем.
+                Определите сколько дней осталось до ближайшего воскресенья.
+            </p>
+            <button onclick="checkResult12()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                226 Пусть дан следующий массив:
+                let months = [
+                'янв', 'фев', 'мар', 'апр', 'май', 'июн',
+                'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+                ];
+                Выведите с помощью этого массива название текущего месяца.
+            </p>
+            <button onclick="checkResult13()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                227 Узнайте, какой день недели был в ваш день рождения.
+            </p>
+            <button onclick="checkResult14()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                228 Выведите на экран timestamp, соответствующий дате 1 января 2025 года.
+            </p>
+            <button onclick="checkResult15()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                229 (1) Выведите на экран количество дней, прошедшее между 1 марта 1988 года и 10 января 2000 года.
+            </p>
+            <button onclick="checkResult16()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                229 (2) Выведите на экран количество месяцев, прошедшее между вашим 
+                рождением и текущим моментом времени.
+            </p>
+            <button onclick="checkResult17()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                230 (3) let now = new Date();
+                let date = new Date(2015, 4, 25, 12, 59, 59);
+                
+                let diff = now - date; // вычитаем два объекта с датами друг от друга
+                console.log(diff); // увидим разницу в миллисекундах
+                Модифицируйте предыдущую задачу так, чтобы на экран выводилась разница в месяцах.
+            </p>
+            <button onclick="checkResult18()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                230 (2) let now = new Date();
+                let date = new Date(2015, 4, 25, 12, 59, 59);
+        
+                let diff = now - date; // вычитаем два объекта с датами друг от друга
+                console.log(diff); // увидим разницу в миллисекундах
+                Модифицируйте предыдущую задачу так, чтобы на экран выводилась разница в днях.
+            </p>
+            <button onclick="checkResult19()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                230 (4) let now = new Date();
+                let date = new Date(2015, 4, 25, 12, 59, 59);
+        
+                let diff = now - date; // вычитаем два объекта с датами друг от друга
+                console.log(diff); // увидим разницу в миллисекундах
+                Модифицируйте предыдущую задачу так, чтобы на экран выводилась разница в годах.
+            </p>
+            <button onclick="checkResult20()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                232 (1) Оформите этот способ решения проблемы в виде функции, 
+                которая параметрами будет принимать месяц и год и возвращать номер
+                последнего дня этого месяца.
+            </p>
+            <button onclick="checkResult21()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                232 (2) Определите, какой день недели будет в последнем дне пятого месяца 2025 года.
+            </p>
+            <button onclick="checkResult22()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                233 (1) Сделайте функцию isLeap, которая параметром будет 
+                принимать год и возвращать true, если этого год високосный, и false -
+                если нет.
+            </p>
+            <button onclick="checkResult23()">Проверить</button>
+        </li>
+        <li>
+            <p>
+            234 (1) Сделайте функцию checkDate, которая будет выполнять описанную проверку. Пусть функция 
+            возвращает true, если дата
+            корректна и false, если нет. Пример работы этой 
+            функции для 31 января и 32 января:
+            
+            console.log(checkDate(2025, 0, 31)); // выведет true
+            console.log(checkDate(2025, 0, 32)); // выведет false
+            </p>
+        <button onclick="checkResult24()">Проверить</button>
+        </li>
+        <li>
+            <p>
+        235 (1) Определите, какой день недели будет 31 декабря текущего года.
+        </p>
+        <button onclick="checkResult25()">Проверить</button>
+        </li>
+
+        <li>
+            <p>
+                235 (2) Определите, какой день недели будет 1 числа текущего месяца.
+            <button onclick="checkResult26()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                235 (3) Определите, какой день недели будет 31 декабря следующего года.
+            </p>
+                <button onclick="checkResult27()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                235 (4) Определите, какой день недели будет через год в такую же дату, как сегодня.
+                <button onclick="checkResult28()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                235 (9) Определите, сколько дней между 20 числом текущего месяца и 10 числом следующего.
+            </p>
+                <button onclick="checkResult29()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                235 (10) Определите, сколько часов прошло между вчерашним полднем и текущим моментом времени.
+                <button onclick="checkResult30()">Проверить</button> 
+            </p>
+        </li>
+        <li>
+            <p>
+                235 (11) Определите, сколько часов прошло между началом дня и текущим моментом времени.
+            </p>
+                <button onclick="checkResult31()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                235 (12) Определите, сколько часов осталось до конца дня.
+            </p>
+                <button onclick="checkResult32()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                235 (13) Рассмотрите промежуток от 2000 года до текущего года. Определите, 
+                сколько раз 1 января в этом промежутке попадало на
+                выходной день, то есть на субботу или на воскресенье.
+            </p>
+            <button onclick="checkResult33()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (1) Определите, сколько секунд прошло с начала дня до настоящего момента времени.
+            </p>
+            <button onclick="checkResult34()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (2) Определите, сколько секунд осталось до конца дня.
+            </p>
+            <button onclick="checkResult35()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (3) Определите, сколько дней осталось до нового года.
+            </p>
+            <button onclick="checkResult36()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (4) Определите, сколько пятниц 13-е в текущем году.
+            </p>
+            <button onclick="checkResult37()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (5) Определите, какой год был 3 месяца назад назадпш.
+            </p>
+            <button onclick="checkResult38()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (6) Определите, какой день недели будет в последнем дне текущего месяца.
+            </p>
+            <button onclick="checkResult39()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                236 (8) Напишите код, который будет находить предыдущий високосный год.
+            </p>
+            <button onclick="checkResult40()">Проверить</button>
+        </li>
+        <li>
+            <p>
+            237 (1) Напишите код, который сравнит две приведенные ниже даты и выведет сообщение о том, 
+            какая из них больше:
+            
+            let date1 = '2020-11-31';
+            let date2 = '2020-12-01';
+            </p>
+            <button onclick="checkResult41()">Проверить</button>
+        </li>
+        <li>
+            <p>
+                238 (1) Получите объект с датой, содержащий текущий момент времени. 
+                Получите объект с датой, содержащий полдень текущего дня.
+                Сравните два этих объекта и определите, был ли уже полдень или нет.
+            </p>
+            <button onclick="checkResult42()">Проверить</button>
+        </li>
+    </ol>
+</body>
+
+
+
+<script src="time.js"></script>
+</body>
+
+</html>
